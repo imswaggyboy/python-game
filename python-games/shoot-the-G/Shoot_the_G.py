@@ -4,10 +4,7 @@ from random import randint
 WIDTH = 600
 HEIGHT = 400
 
-#a = Actor("a")
-#d = Actor("d")
 g = Actor("g")
-#o = Actor("o")
 
 
 score = 0
@@ -15,10 +12,7 @@ game_over = False
 
 def draw():
     screen.clear()
-    #a.draw()
-    #d.draw()
     g.draw()
-    #o.draw()
     screen.draw.text("Score: " + str(score), topleft = (10,10))
 
     if game_over:
@@ -26,15 +20,10 @@ def draw():
         screen.draw.text("You Missed the G \n Total Score: " + str(score), color = "black", topleft = (10,10),fontsize = 70)
 
 def place_p():
-    #a.x = randint(20, (WIDTH-20))
-    #a.y= randint(20, (HEIGHT-20))
-    #d.x = randint(20, (WIDTH-20))
-    #d.y = randint(20, (HEIGHT-20))
     g.x= randint(20, (WIDTH-20))
     g.y= randint(20, (HEIGHT-20))
-    #o.x = randint(20, (WIDTH-20))
-    #o.y = randint(20, (HEIGHT-20))
-
+    
+    
 def on_mouse_down(pos):
     global score
     global game_over
